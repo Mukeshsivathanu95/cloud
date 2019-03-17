@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>GPU</title>
+</head>
+<body>
+  <u><h1><left><b>Information of "{{ myuser.name }}"<br /></b></left></h1></u>
+  <br/>
+<b>Name:</b>{{ myuser.name }}<br/>
+<b>Manufacturer:</b>{{ myuser.manufacturer }}<br/>
+<b>Date:</b>{{ myuser.date }}<br/>
+<b>GeometryShader:</b>{{ myuser.geometryShader }}<br/>
+<b>TesselationShader:</b>{{ myuser.tesselationShader }}<br/>
+<b>ShaderInt16:</b>{{ myuser.shaderInt16 }}<br/>
+<b>SparseBinding:</b>{{ myuser.sparseBinding }}<br/>
+<b>TextureCompressionETC2:</b>{{ myuser.textureCompressionETC2 }}<br/>
+<b>VertexPipelineStoresAndAtomics:</b>{{ myuser.vertexPipelineStoresAndAtomics }}<br/>
+<br/>
+<br/>
+<b>UPDATE</b><a href='/update/{{ myuser.name }}'> {{ myuser.name }} </a><b>(click here)</b>
+<br/>
+<br/>
+<a href='/'> Back </a><br/>
+<br/>
+<hr/>
+</body>
+</html>

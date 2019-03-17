@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Update User information</title>
+</head>
+<body>
+Edit your GPU information below<br/>
+
+<form method="post" action="/update/{{ my }}">
+Manufacturer:<input type="text" name="users_manufacturer" value="{{ myuser.manufacturer }}"
+<br/>
+<br/>
+Date:<input type="text" name="users_date" value="{{ myuser.date }}"/>
+<br/>
+geometryShader:<input type="checkbox" name="users_geometryShader" value="{{ myuser.geometryShader }}"/>
+<br/>
+tesselationShader:<input type="checkbox" name="users_tesselationShader" value="{{ myuser.tesselationShader }}"/>
+<br/>
+shaderInt16:<input type="checkbox" name="users_shaderInt16" value="{{ myuser.shaderInt16 }}"/>
+<br/>
+sparseBinding:<input type="checkbox" name="users_sparseBinding" value="{{ myuser.sparseBinding }}"/>
+<br/>
+textureCompressionETC2:<input type="checkbox" name="users_textureCompressionETC2" value="{{ myuser.textureCompressionETC2 }}"/>
+<br/>
+vertexPipelineStoresAndAtomics:<input type="checkbox" name="users_vertexPipelineStoresAndAtomics" value="{{ myuser.vertexPipelineStoresAndAtomics }}"/>
+<br/>
+<br/><input type="submit" value="Update" name="button"/>
+</form>
+<form method="post" action="/update">
+<a href='/'> Cancel </a>
+</form>
+<br/>
+</body>
+</html>

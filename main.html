@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>User login/logout</title>
+</head>
+<body>
+  {% if user %}
+<h1><center><u>VULKAN FEATURES</u></center></h1>
+<center><u><b>CREATE YOUR GPU </b></u></center><br/><br/>
+<form method="post" action="/">
+<pre>
+<b>Name</b>           <input type="text" name="users_name" value="{{ myuser.name }}"/> <br />
+<b>Manufacturer</b>   <input type="text" name="users_manufacturer" value="{{ myuser.manufacturer }}"> <br />
+<b>Date issued</b>    <input type="date" name="users_date" value="{{ myuser.date }}"/> <br />
+geometryShader:<input type="checkbox" name="users_geometryShader" value=True/>
+tesselationShader:<input type="checkbox" name="users_tesselationShader" value=True/>
+shaderInt16:<input type="checkbox" name="users_shaderInt16" value=True/>
+sparseBinding:<input type="checkbox" name="users_sparseBinding" value=True/>
+textureCompressionETC2:<input type="checkbox" name="users_textureCompressionETC2" value=True/>
+vertexPipelineStoresAndAtomics:<input type="checkbox" name="users_vertexPipelineStoresAndAtomics" value=True/>
+</pre>
+<input type="submit" value="Create" name="button"/>
+<input type="reset" value="Reset" name="button"/>
+</form>
+<b>GPU:<br/></b>
+{% for item in result %}
+<a href='/view/{{ item.name }}'> {{ item.name }} </a><br/>
+{% endfor %} <br />
+<div id = "menu" align = "middle">
+      <a href = "/query">QUERY</a> |
+      <a href = "/compare">COMPARE</a>
+    </div>
+  {% else %}
+<left><h1><b>GPU DATABASE OF VULKAN FEATURES</b></h1></left>
+<h3><left>Please login to continue</left></h3><br/>
+{% endif %}
+<h3><a href='{{ url }}'> {{ url_string }} </a></h3>
+<hr/>
+  <br/>
+  </body>
+</html>
